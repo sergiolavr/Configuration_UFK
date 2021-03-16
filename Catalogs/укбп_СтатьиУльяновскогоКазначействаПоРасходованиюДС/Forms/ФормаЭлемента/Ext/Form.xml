@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="УкрупненныйКодСведений" id="13">
+			<DataPath>Объект.УкрупненныйКодСведений</DataPath>
+			<ContextMenu name="УкрупненныйКодСведенийКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="УкрупненныйКодСведенийРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="НаименованиеУкрупненногоКодаСведений" id="16">
+			<DataPath>Объект.НаименованиеУкрупненногоКодаСведений</DataPath>
+			<ContextMenu name="НаименованиеУкрупненногоКодаСведенийКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="НаименованиеУкрупненногоКодаСведенийРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Детализированный код сведений</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Родитель" id="7">
+			<DataPath>1/-4</DataPath>
+			<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование детализированного кода сведений</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="НДС" id="10">
+			<DataPath>Объект.НДС</DataPath>
+			<ContextMenu name="НДСКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="НДСРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<Table name="СтатьиКалькуляцииЗатрат" id="19">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.СтатьиКалькуляцииЗатрат</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СтатьиКалькуляцииЗатратКонтекстноеМеню" id="20"/>
+			<AutoCommandBar name="СтатьиКалькуляцииЗатратКоманднаяПанель" id="21"/>
+			<ExtendedTooltip name="СтатьиКалькуляцииЗатратРасширеннаяПодсказка" id="22"/>
+			<SearchStringAddition name="СтатьиКалькуляцииЗатратСтрокаПоиска" id="23">
+				<AdditionSource>
+					<Item>СтатьиКалькуляцииЗатрат</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СтатьиКалькуляцииЗатратСтрокаПоискаКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="СтатьиКалькуляцииЗатратСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СтатьиКалькуляцииЗатратСостояниеПросмотра" id="26">
+				<AdditionSource>
+					<Item>СтатьиКалькуляцииЗатрат</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СтатьиКалькуляцииЗатратСостояниеПросмотраКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="СтатьиКалькуляцииЗатратСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СтатьиКалькуляцииЗатратУправлениеПоиском" id="29">
+				<AdditionSource>
+					<Item>СтатьиКалькуляцииЗатрат</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СтатьиКалькуляцииЗатратУправлениеПоискомКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="СтатьиКалькуляцииЗатратУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СтатьиКалькуляцииЗатратНомерСтроки" id="32">
+					<DataPath>Объект.СтатьиКалькуляцииЗатрат.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СтатьиКалькуляцииЗатратНомерСтрокиКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="СтатьиКалькуляцииЗатратНомерСтрокиРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+				<InputField name="СтатьиКалькуляцииЗатратСтатьяКалькуляции" id="35">
+					<DataPath>Объект.СтатьиКалькуляцииЗатрат.СтатьяКалькуляции</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СтатьиКалькуляцииЗатратСтатьяКалькуляцииКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="СтатьиКалькуляцииЗатратСтатьяКалькуляцииРасширеннаяПодсказка" id="37"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.укбп_СтатьиУльяновскогоКазначействаПоРасходованиюДС</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>
