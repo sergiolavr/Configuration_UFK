@@ -1,27 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9.1">
-	<Title>
-		<v8:item>
-			<v8:lang>ru</v8:lang>
-			<v8:content>Статьи УФК - Управление федерального казначейства (УКБП)</v8:content>
-		</v8:item>
-	</Title>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<ChildItems>
-			<Button name="ФормаОбновить" id="29">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.StandardCommand.Refresh</CommandName>
-				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
-				<ExtendedTooltip name="ФормаОбновитьРасширеннаяПодсказка" id="30"/>
-			</Button>
-		</ChildItems>
-	</AutoCommandBar>
+	<AutoCommandBar name="" id="-1"/>
 	<ChildItems>
 		<Table name="Список" id="1">
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
 			<DefaultItem>true</DefaultItem>
-			<HeaderHeight>2</HeaderHeight>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
@@ -41,7 +25,9 @@
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
 			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
-			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
 			<SearchStringAddition name="СписокСтрокаПоиска" id="5">
 				<AdditionSource>
@@ -68,52 +54,31 @@
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="13"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<InputField name="УкрупненныйКодСведений" id="23">
-					<DataPath>Список.УкрупненныйКодСведений</DataPath>
-					<ContextMenu name="УкрупненныйКодСведенийКонтекстноеМеню" id="24"/>
-					<ExtendedTooltip name="УкрупненныйКодСведенийРасширеннаяПодсказка" id="25"/>
-				</InputField>
-				<InputField name="НаименованиеУкрупненногоКодаСведений" id="26">
-					<DataPath>Список.НаименованиеУкрупненногоКодаСведений</DataPath>
-					<ContextMenu name="НаименованиеУкрупненногоКодаСведенийКонтекстноеМеню" id="27"/>
-					<ExtendedTooltip name="НаименованиеУкрупненногоКодаСведенийРасширеннаяПодсказка" id="28"/>
-				</InputField>
-				<LabelField name="Код" id="17">
-					<DataPath>Список.Code</DataPath>
-					<UserVisible>
-						<xr:Common>false</xr:Common>
-					</UserVisible>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Детализированный код сведений</v8:content>
-						</v8:item>
-					</Title>
-					<TitleHeight>3</TitleHeight>
-					<Width>12</Width>
-					<MaxWidth>2</MaxWidth>
-					<HorizontalStretch>false</HorizontalStretch>
-					<ContextMenu name="КодКонтекстноеМеню" id="18"/>
-					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="19"/>
-				</LabelField>
-				<LabelField name="Наименование" id="14">
-					<DataPath>Список.Description</DataPath>
+				<LabelField name="Дата" id="14">
+					<DataPath>Список.Date</DataPath>
 					<DefaultItem>true</DefaultItem>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Наименование детализированного кода сведений</v8:content>
-						</v8:item>
-					</Title>
-					<TitleHeight>2</TitleHeight>
-					<ContextMenu name="НаименованиеКонтекстноеМеню" id="15"/>
-					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="16"/>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="16"/>
 				</LabelField>
-				<LabelField name="НДС" id="20">
-					<DataPath>Список.НДС</DataPath>
-					<EditMode>Directly</EditMode>
-					<ContextMenu name="НДСКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="НДСРасширеннаяПодсказка" id="22"/>
+				<LabelField name="Номер" id="17">
+					<DataPath>Список.Number</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<LabelField name="БанковскийСчет" id="20">
+					<DataPath>Список.БанковскийСчет</DataPath>
+					<ContextMenu name="БанковскийСчетКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="БанковскийСчетРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<LabelField name="Ответственный" id="23">
+					<DataPath>Список.Ответственный</DataPath>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<LabelField name="Комментарий" id="26">
+					<DataPath>Список.Комментарий</DataPath>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="28"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -127,7 +92,7 @@
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
-				<MainTable>Catalog.укбп_СтатьиУльяновскогоКазначействаПоРасходованиюДС</MainTable>
+				<MainTable>Document.укбп_СведенияУФК</MainTable>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>

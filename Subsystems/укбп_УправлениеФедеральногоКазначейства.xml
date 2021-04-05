@@ -22,6 +22,9 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.укбп_ЗаказЗаявка</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ПлатежноеПоручениеИсходящее</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.укбп_ВидОперацииЗаказЗаявка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаявкаНаРасходованиеСредств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтатьиДвиженияДенежныхСредств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.у_РаботаСДиалогами</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
