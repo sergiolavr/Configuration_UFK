@@ -2,8 +2,49 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9.1">
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
+	<ChildItems>
+		<Table name="НастройкиОтбор" id="1">
+			<Representation>Tree</Representation>
+			<Autofill>true</Autofill>
+			<Width>60</Width>
+			<InitialTreeView>ExpandAllLevels</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>КомпоновщикНастроек.Settings.Filter</DataPath>
+			<ViewMode>All</ViewMode>
+			<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
+			<ContextMenu name="НастройкиОтборКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="НастройкиОтборКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="НастройкиОтборРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="НастройкиОтборСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>НастройкиОтбор</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НастройкиОтборСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="НастройкиОтборСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НастройкиОтборСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>НастройкиОтбор</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НастройкиОтборСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="НастройкиОтборСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НастройкиОтборУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>НастройкиОтбор</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НастройкиОтборУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="НастройкиОтборУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+		</Table>
+	</ChildItems>
 	<Attributes>
 		<Attribute name="КомпоновщикНастроек" id="1">
 			<Title>
@@ -15,14 +56,11 @@
 			<Type>
 				<v8:Type>dcsset:SettingsComposer</v8:Type>
 			</Type>
+			<MainAttribute>true</MainAttribute>
 		</Attribute>
-		<Attribute name="АдресСхемы" id="2">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Адрес схемы</v8:content>
-				</v8:item>
-			</Title>
+	</Attributes>
+	<Parameters>
+		<Parameter name="АдресСхемы">
 			<Type>
 				<v8:Type>xs:string</v8:Type>
 				<v8:StringQualifiers>
@@ -30,6 +68,7 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
-		</Attribute>
-	</Attributes>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
 </Form>

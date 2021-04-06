@@ -483,6 +483,7 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
+			<Template>СхемаИзвлеченияДанных</Template>
 		</ChildObjects>
 	</Document>
 </MetaDataObject>
