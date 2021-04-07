@@ -94,14 +94,6 @@
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
-		<InputField name="БанковскийСчет" id="7">
-			<DataPath>Объект.БанковскийСчет</DataPath>
-			<ContextMenu name="БанковскийСчетКонтекстноеМеню" id="8"/>
-			<ExtendedTooltip name="БанковскийСчетРасширеннаяПодсказка" id="9"/>
-			<Events>
-				<Event name="StartChoice">БанковскийСчетНачалоВыбора</Event>
-			</Events>
-		</InputField>
 		<Table name="СтатьиСведений" id="10">
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<EnableStartDrag>true</EnableStartDrag>
@@ -165,11 +157,6 @@
 						<CommandName>Form.Item.СтатьиСведений.StandardCommand.SortListDesc</CommandName>
 						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
 						<ExtendedTooltip name="СтатьиСведенийСортироватьСписокПоУбываниюРасширеннаяПодсказка" id="72"/>
-					</Button>
-					<Button name="Заполнить" id="35">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.Заполнить</CommandName>
-						<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="36"/>
 					</Button>
 					<Button name="СтатьиСведенийПодбор" id="75">
 						<Type>CommandBarButton</Type>
@@ -269,21 +256,6 @@
 		</Attribute>
 	</Attributes>
 	<Commands>
-		<Command name="Заполнить" id="1">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Заполнить</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Заполнить</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>Заполнить</Action>
-		</Command>
 		<Command name="Подбор" id="2">
 			<Title>
 				<v8:item>

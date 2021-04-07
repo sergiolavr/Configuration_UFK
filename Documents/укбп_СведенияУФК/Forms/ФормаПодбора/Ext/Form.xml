@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9.1">
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -14,10 +16,58 @@
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
 			<DataPath>КомпоновщикНастроек.Settings.Filter</DataPath>
+			<CommandSet>
+				<ExcludedCommand>AddFilterItemGroup</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Detailed</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>GroupFilterItems</ExcludedCommand>
+				<ExcludedCommand>HierarchicalList</ExcludedCommand>
+				<ExcludedCommand>List</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>SetPresentation</ExcludedCommand>
+				<ExcludedCommand>Tree</ExcludedCommand>
+				<ExcludedCommand>Ungroup</ExcludedCommand>
+				<ExcludedCommand>UseFieldAsValue</ExcludedCommand>
+				<ExcludedCommand>UserSettingItemProperties</ExcludedCommand>
+			</CommandSet>
 			<ViewMode>All</ViewMode>
 			<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
 			<ContextMenu name="НастройкиОтборКонтекстноеМеню" id="2"/>
-			<AutoCommandBar name="НастройкиОтборКоманднаяПанель" id="3"/>
+			<AutoCommandBar name="НастройкиОтборКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ФормаЗаполнить" id="14">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<CommandName>Form.Command.Заполнить</CommandName>
+						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<ExtendedTooltip name="ФормаЗаполнитьРасширеннаяПодсказка" id="15"/>
+					</Button>
+					<Button name="НастройкиОтборДобавитьЭлементОтбора" id="16">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.НастройкиОтбор.StandardCommand.AddFilterItem</CommandName>
+						<ExtendedTooltip name="НастройкиОтборДобавитьЭлементОтбораРасширеннаяПодсказка" id="17"/>
+					</Button>
+					<Button name="НастройкиОтборУдалить" id="18">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.НастройкиОтбор.StandardCommand.Delete</CommandName>
+						<ExtendedTooltip name="НастройкиОтборУдалитьРасширеннаяПодсказка" id="19"/>
+					</Button>
+					<Button name="НастройкиОтборУстановитьФлажки" id="20">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.НастройкиОтбор.StandardCommand.CheckAll</CommandName>
+						<ExtendedTooltip name="НастройкиОтборУстановитьФлажкиРасширеннаяПодсказка" id="21"/>
+					</Button>
+					<Button name="НастройкиОтборСнятьФлажки" id="22">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.НастройкиОтбор.StandardCommand.UncheckAll</CommandName>
+						<ExtendedTooltip name="НастройкиОтборСнятьФлажкиРасширеннаяПодсказка" id="23"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
 			<ExtendedTooltip name="НастройкиОтборРасширеннаяПодсказка" id="4"/>
 			<SearchStringAddition name="НастройкиОтборСтрокаПоиска" id="5">
 				<AdditionSource>
@@ -59,6 +109,23 @@
 			<MainAttribute>true</MainAttribute>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="Заполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Заполнить</Action>
+		</Command>
+	</Commands>
 	<Parameters>
 		<Parameter name="АдресСхемы">
 			<Type>
