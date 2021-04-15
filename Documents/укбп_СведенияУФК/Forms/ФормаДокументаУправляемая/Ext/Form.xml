@@ -94,6 +94,11 @@
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
+		<InputField name="БанковскийСчет" id="77">
+			<DataPath>Объект.БанковскийСчет</DataPath>
+			<ContextMenu name="БанковскийСчетКонтекстноеМеню" id="78"/>
+			<ExtendedTooltip name="БанковскийСчетРасширеннаяПодсказка" id="79"/>
+		</InputField>
 		<Table name="СтатьиСведений" id="10">
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<EnableStartDrag>true</EnableStartDrag>
