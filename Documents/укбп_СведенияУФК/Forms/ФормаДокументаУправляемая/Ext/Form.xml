@@ -98,6 +98,9 @@
 			<DataPath>Объект.БанковскийСчет</DataPath>
 			<ContextMenu name="БанковскийСчетКонтекстноеМеню" id="78"/>
 			<ExtendedTooltip name="БанковскийСчетРасширеннаяПодсказка" id="79"/>
+			<Events>
+				<Event name="StartChoice">БанковскийСчетНачалоВыбора</Event>
+			</Events>
 		</InputField>
 		<Table name="СтатьиСведений" id="10">
 			<AutoInsertNewRow>true</AutoInsertNewRow>
