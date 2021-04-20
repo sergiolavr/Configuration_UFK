@@ -65,6 +65,16 @@
 					<ContextMenu name="НомерКонтекстноеМеню" id="18"/>
 					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="19"/>
 				</LabelField>
+				<LabelField name="БанковскийСчет" id="32">
+					<DataPath>Список.БанковскийСчет</DataPath>
+					<ContextMenu name="БанковскийСчетКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="БанковскийСчетРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+				<LabelField name="Статус" id="29">
+					<DataPath>Список.Статус</DataPath>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="31"/>
+				</LabelField>
 				<LabelField name="Ответственный" id="23">
 					<DataPath>Список.Ответственный</DataPath>
 					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="24"/>
