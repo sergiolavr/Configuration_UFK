@@ -29,31 +29,31 @@
 			<Button name="ФормаПровести" id="53">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.StandardCommand.Post</CommandName>
-				<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="54"/>
 			</Button>
 			<Button name="ФормаОтменаПроведения" id="55">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.StandardCommand.UndoPosting</CommandName>
-				<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаОтменаПроведенияРасширеннаяПодсказка" id="56"/>
 			</Button>
 			<Button name="ФормаЗаписать" id="47">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.StandardCommand.Write</CommandName>
-				<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="48"/>
 			</Button>
 			<Button name="ФормаПеречитать" id="49">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.StandardCommand.Reread</CommandName>
-				<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаПеречитатьРасширеннаяПодсказка" id="50"/>
 			</Button>
 			<Button name="ФормаПоказатьВСписке" id="51">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.StandardCommand.ShowInList</CommandName>
-				<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаПоказатьВСпискеРасширеннаяПодсказка" id="52"/>
 			</Button>
 			<Button name="ФормаРегистрНакопленияукбп_ОстаткиЛимитовПоСведениямУФКОткрытьПоРегистратору" id="80">
@@ -68,30 +68,66 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="НомерДата" id="43">
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Номер дата</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Group>AlwaysHorizontal</Group>
-			<Representation>None</Representation>
+		<UsualGroup name="Группа1" id="87">
+			<Representation>NormalSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="НомерДатаРасширеннаяПодсказка" id="44"/>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="88"/>
 			<ChildItems>
-				<InputField name="Номер" id="1">
-					<DataPath>Объект.Number</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
-					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
-				</InputField>
-				<InputField name="Дата" id="4">
-					<DataPath>Объект.Date</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
-					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
-				</InputField>
+				<UsualGroup name="ГруппаСтатус" id="82">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Width>17</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСтатусРасширеннаяПодсказка" id="83"/>
+					<ChildItems>
+						<InputField name="Статус" id="84">
+							<DataPath>Объект.Статус</DataPath>
+							<Width>15</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<DropListButton>true</DropListButton>
+							<ChoiceButton>false</ChoiceButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChooseType>false</ChooseType>
+							<ChoiceListButton>true</ChoiceListButton>
+							<ContextMenu name="СтатусКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="86"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="НомерДата" id="43">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер дата</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="НомерДатаРасширеннаяПодсказка" id="44"/>
+					<ChildItems>
+						<InputField name="Номер" id="1">
+							<DataPath>Объект.Number</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="Дата" id="4">
+							<DataPath>Объект.Date</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<InputField name="БанковскийСчет" id="77">
@@ -103,7 +139,9 @@
 			</Events>
 		</InputField>
 		<Table name="СтатьиСведений" id="10">
+			<Footer>true</Footer>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<Output>Enable</Output>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
 			<DataPath>Объект.СтатьиСведений</DataPath>
@@ -114,57 +152,71 @@
 				<ExcludedCommand>EndEdit</ExcludedCommand>
 				<ExcludedCommand>Find</ExcludedCommand>
 				<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
-				<ExcludedCommand>OutputList</ExcludedCommand>
 				<ExcludedCommand>SearchEverywhere</ExcludedCommand>
 				<ExcludedCommand>SelectAll</ExcludedCommand>
 				<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
 				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
 			</CommandSet>
 			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="СтатьиСведенийКонтекстноеМеню" id="11"/>
+			<ContextMenu name="СтатьиСведенийКонтекстноеМеню" id="11">
+				<ChildItems>
+					<Button name="СтатьиСведенийКонтекстноеМенюВывестиСписок" id="91">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СтатьиСведений.StandardCommand.OutputList</CommandName>
+						<ExtendedTooltip name="СтатьиСведенийКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="92"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
 			<AutoCommandBar name="СтатьиСведенийКоманднаяПанель" id="12">
 				<ChildItems>
 					<Button name="СтатьиСведенийДобавить" id="59">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Item.СтатьиСведений.StandardCommand.Add</CommandName>
-						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 						<ExtendedTooltip name="СтатьиСведенийДобавитьРасширеннаяПодсказка" id="60"/>
 					</Button>
 					<Button name="СтатьиСведенийСкопировать" id="61">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Item.СтатьиСведений.StandardCommand.Copy</CommandName>
-						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 						<ExtendedTooltip name="СтатьиСведенийСкопироватьРасширеннаяПодсказка" id="62"/>
 					</Button>
 					<Button name="СтатьиСведенийУдалить" id="63">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Item.СтатьиСведений.StandardCommand.Delete</CommandName>
-						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 						<ExtendedTooltip name="СтатьиСведенийУдалитьРасширеннаяПодсказка" id="64"/>
 					</Button>
 					<Button name="СтатьиСведенийПереместитьВверх" id="65">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Item.СтатьиСведений.StandardCommand.MoveUp</CommandName>
-						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 						<ExtendedTooltip name="СтатьиСведенийПереместитьВверхРасширеннаяПодсказка" id="66"/>
 					</Button>
 					<Button name="СтатьиСведенийПереместитьВниз" id="67">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Item.СтатьиСведений.StandardCommand.MoveDown</CommandName>
-						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 						<ExtendedTooltip name="СтатьиСведенийПереместитьВнизРасширеннаяПодсказка" id="68"/>
 					</Button>
 					<Button name="СтатьиСведенийСортироватьСписокПоВозрастанию" id="69">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Item.СтатьиСведений.StandardCommand.SortListAsc</CommandName>
-						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 						<ExtendedTooltip name="СтатьиСведенийСортироватьСписокПоВозрастаниюРасширеннаяПодсказка" id="70"/>
 					</Button>
 					<Button name="СтатьиСведенийСортироватьСписокПоУбыванию" id="71">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Item.СтатьиСведений.StandardCommand.SortListDesc</CommandName>
-						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 						<ExtendedTooltip name="СтатьиСведенийСортироватьСписокПоУбываниюРасширеннаяПодсказка" id="72"/>
+					</Button>
+					<Button name="СтатьиСведенийВывестиСписок" id="89">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СтатьиСведений.StandardCommand.OutputList</CommandName>
+						<RepresentationInContextMenu>OnlyInContextMenu</RepresentationInContextMenu>
+						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<ExtendedTooltip name="СтатьиСведенийВывестиСписокРасширеннаяПодсказка" id="90"/>
 					</Button>
 					<Button name="СтатьиСведенийПодбор" id="75">
 						<Type>CommandBarButton</Type>
@@ -214,12 +266,14 @@
 				<InputField name="СтатьиСведенийСуммаСведения" id="29">
 					<DataPath>Объект.СтатьиСведений.СуммаСведения</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.СтатьиСведений.TotalСуммаСведения</FooterDataPath>
 					<ContextMenu name="СтатьиСведенийСуммаСведенияКонтекстноеМеню" id="30"/>
 					<ExtendedTooltip name="СтатьиСведенийСуммаСведенияРасширеннаяПодсказка" id="31"/>
 				</InputField>
 				<InputField name="СтатьиСведенийЛимитРасходаПоСведениям" id="32">
 					<DataPath>Объект.СтатьиСведений.ЛимитРасходаПоСведениям</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.СтатьиСведений.TotalЛимитРасходаПоСведениям</FooterDataPath>
 					<ContextMenu name="СтатьиСведенийЛимитРасходаПоСведениямКонтекстноеМеню" id="33"/>
 					<ExtendedTooltip name="СтатьиСведенийЛимитРасходаПоСведениямРасширеннаяПодсказка" id="34"/>
 				</InputField>
@@ -285,7 +339,18 @@
 			<Item>
 				<Command>AccumulationRegister.укбп_ОстаткиЛимитовПоСведениямУФК.StandardCommand.OpenByRecorder</Command>
 				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
 				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.укбп_СтатусыБанковскихСчетовДляСведенийУФК.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
 			</Item>
 		</NavigationPanel>
 	</CommandInterface>
