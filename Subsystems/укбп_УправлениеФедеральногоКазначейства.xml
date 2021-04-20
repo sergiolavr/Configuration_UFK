@@ -25,6 +25,9 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаявкаНаРасходованиеСредств</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтатьиДвиженияДенежныхСредств</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.у_РаботаСДиалогами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.укбп_ТипыБанковскихСчетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.укбп_СтатусыСведенийУФК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.укбп_СтатусыБанковскихСчетовДляСведенийУФК</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
